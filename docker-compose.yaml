@@ -1,0 +1,9 @@
+version: "3"
+services:
+  lib:
+    image: python:3.7
+    volumes:
+      - type: bind
+        source: .
+        target: /code
+    working_dir: /code

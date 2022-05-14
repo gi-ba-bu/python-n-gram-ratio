@@ -1,0 +1,8 @@
+version: "3"
+services:
+  lib:
+    container_name: ngramratio_test_score
+    tty: true
+networks:
+  default:
+    name: ngramratio_test
