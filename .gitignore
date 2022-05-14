@@ -5,9 +5,7 @@ dist
 *.pyc
 /ngramratio.egg-info/
 *.egg*
-# *.pyc
 build/
-# .coverage
 dist/
 venv*
 .vscode
