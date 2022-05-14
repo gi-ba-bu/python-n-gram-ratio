@@ -91,18 +91,18 @@ On Linux `tox` expects to find executables like `python3.6`, `python3.10` etc. O
 `C:\Python36\python.exe` and
 `C:\Python310\python.exe` respectively.
 
-To test a Python environments, use the `-e` option. For example, to
+To test a specific Python environment, use the `-e` option. For example, to
 test against Python 3.7 run:
 
     tox -e py37
 
 in the root of the project source tree.
 
-To fix code formatting (it will install `pre-commit` as a dependency):
+To fix code formatting (this will install `pre-commit` as a dependency), run:
 
     tox -e lint
 
-See `tox.ini` file to learn more about testing.
+See the `tox.ini` file in the repository to learn more about the testing instructions being used.
 
 ## Contributions
 
