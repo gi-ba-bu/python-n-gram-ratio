@@ -40,7 +40,10 @@ First step: initialize an object of class SequenceMatcherExtended specifying the
 
     >>> SequenceMatcherExtended = ngrmaratio.SequenceMatcherExtended
 
-    >>> s = SequenceMatcher(None, "ab cde", "bcde", None)
+    >>> string_one = "ab cde"
+    >>> string_two = "bcde"
+
+    >>> s = SequenceMatcherExtended(None, string_one, string_two, None)
     >>> # The "None" arguments prevents from any character being considered junk..
     >>> # .. see the difflib documentation for more information on this.
 ```
