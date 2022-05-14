@@ -1,0 +1,18 @@
+build
+dist
+.tox
+*~
+*.pyc
+/ngramratio.egg-info/
+*.egg*
+# *.pyc
+build/
+# .coverage
+dist/
+venv*
+.vscode
+Pipfile*
+__pyc*
+.pyt*
+.coverage
+coverage.xml
