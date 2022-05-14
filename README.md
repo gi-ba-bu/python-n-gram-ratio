@@ -2,7 +2,7 @@
 
 A method for similarity scoring of two strings.
 
-The method, namely `nratio`, belongs to the class `SequenceMatcherExtended`, which is an extension of the `SequenceMatcher` class of the difflib package (https://docs.python.org/3/library/difflib.html). In particular, `nratio` (method of `SequenceMatcherExtended`) is an augmenation of `ratio` (method of `SequenceMatcher`).
+The method, namely `nratio`, belongs to the class `SequenceMatcherExtended`, which is an extension of the `SequenceMatcher` class of the [difflib package](https://docs.python.org/3/library/difflib.html). In particular, `nratio` (method of `SequenceMatcherExtended`) is an augmenation of `ratio` (method of `SequenceMatcher`).
 
 `ngramratio` is to be pronounced as "n gram ratio". The library uses n-grams to find a similarity score via a division (ratio) of the number of matched characters by the total number of characters. See below for more details.
 
