@@ -33,22 +33,28 @@ In this case the library will be installed to
 
 The module provides a method, `nratio`, which takes an integer number (the user's required minimum n-gram length, i.e. number of consecutive characters, to be matched) and outputs a similarity index (float number in [0,1]).
 
-First step: initialize an object of class SequenceMatcherExtended specifying the two strings to be compared:
+### **First step**: initialize an object of class SequenceMatcherExtended specifying the two strings to be compared:
 
 ```
-    >>> import ngramratio from ngramratio
+    >>> from ngramratio import ngramratio
 
     >>> SequenceMatcherExtended = ngrmaratio.SequenceMatcherExtended
 
-    >>> string_one = "ab cde"
-    >>> string_two = "bcde"
+    >>> a = "ab cde" # string 1
+    >>> b = "bcde"   # string 2
 
-    >>> s = SequenceMatcherExtended(None, string_one, string_two, None)
-    >>> # The "None" arguments prevents from any character being considered junk..
-    >>> # .. see the difflib documentation for more information on this.
+    >>> s = SequenceMatcherExtended(a, b)
 ```
 
-Second step: apply the `ratio` and `nratio` methods and compare similarity scores:
+**Alternatively**, the last line can be rewritten more generally as
+
+```
+    >>> s = SequenceMatcherExtended(None, a, b, None)
+```
+
+where the first and last arguments are used to specify that no string will be considered junk. For more information on these arguments, see the documentation of the original [difflib package](https://docs.python.org/3/library/difflib.html).
+
+### **Second step**: apply the `ratio` and `nratio` methods and compare similarity scores:
 
 ```
     >>> s.ratio()
@@ -64,7 +70,7 @@ Second step: apply the `ratio` and `nratio` methods and compare similarity score
     >>> # Matches substring of length 3 or more. Matches: "cde"(length 3). Score: 3*2/10.
     0.6
     >>> s.nratio(4)
-    >>> # Matches substring of length 3 or more. Score 0/10.
+    >>> # Matches substring of length 4 or more. Score 0/10.
     0.0
 ```
 
